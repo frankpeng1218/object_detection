@@ -12,7 +12,22 @@
 
 The application is applied on the Jetson Nano 2GB Developer Kit platform
 **Jetson nano setup:**  
-``````
+The way to setup jupyter path: https://blog.csdn.net/qq_25662827/article/details/122158526
+The way to install oled display with ip and memory usage: https://www.youtube.com/watch?v=eMNIfNaSHQY
+
+
+```
+sudo docker pull python:3.12
+sudo docker images
+sudo docker run --gpus all -it -v /home/jetson-nano/yolo_12242024:/yolo_12242024 python:3.12 bash
+apt update
+apt install -y libgl1 libglib2.0-0
+pip install --upgrade pip setuptools wheel
+pip install ultralytics
+pip install roboflow
+
+```
+
 
 
 3. We can train the model through Robotflow. However, after downloading the dataset, we'll get the api key and train the model on our side.
